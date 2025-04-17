@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post a Job | Applyly</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">Applyly</h1>
+      <nav class="space-x-4 text-sm">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="job-details.html" class="hover:text-blue-600">Jobs</a>
+        <a href="post-job.html" class="font-semibold text-blue-600 underline">Post a Job</a>
+        <a href="#" class="px-4 py-1 border rounded hover:bg-blue-50 text-blue-600">Login</a>
+        <a href="#" class="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Form Section -->
+  <main class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-8 mt-10">
+    <h2 class="text-2xl font-bold mb-6 text-gray-900">Post a Job</h2>
+    
+    <form action="#" method="POST" class="space-y-5">
+      <div>
+        <label for="jobTitle" class="block text-sm font-medium">Job Title</label>
+        <input id="jobTitle" name="jobTitle" type="text" required placeholder="Frontend Developer" class="w-full mt-1 border border-gray-300 rounded px-3 py-2" />
+      </div>
+
+      <div>
+        <label for="companyName" class="block text-sm font-medium">Company Name</label>
+        <input id="companyName" name="companyName" type="text" required placeholder="Google" class="w-full mt-1 border border-gray-300 rounded px-3 py-2" />
+      </div>
+
+      <div>
+        <label for="location" class="block text-sm font-medium">Location</label>
+        <input id="location" name="location" type="text" required placeholder="Bangalore" class="w-full mt-1 border border-gray-300 rounded px-3 py-2" />
+      </div>
+
+      <div>
+        <label for="jobType" class="block text-sm font-medium">Job Type</label>
+        <select id="jobType" name="jobType" required class="w-full mt-1 border border-gray-300 rounded px-3 py-2">
+          <option value="">Select type</option>
+          <option>Full-Time</option>
+          <option>Part-Time</option>
+          <option>Internship</option>
+          <option>Remote</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="description" class="block text-sm font-medium">Description</label>
+        <textarea id="description" name="description" required placeholder="Job responsibilities, skills required..." class="w-full mt-1 border border-gray-300 rounded px-3 py-2" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Submit Job</button>
+    </form>
+  </main>
+
+</body>
+</html>
+

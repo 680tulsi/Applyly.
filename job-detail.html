@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <div class="max-w-4xl mx-auto my-10 bg-white p-6 rounded shadow" id="jobDetails">
+    <!-- Job details will be inserted here -->
+  </div>
+
+  <script>
+    const jobs = [
+      {
+        id: 1,
+        title: "Frontend Developer",
+        company: "Google",
+        location: "Bangalore",
+        type: "Full-Time",
+        description: "We are looking for a passionate Frontend Developer skilled in HTML, CSS, JavaScript and React.",
+        responsibilities: ["Build reusable UI components.", "Collaborate with designers and backend developers."],
+        requirements: ["React knowledge", "REST API experience"],
+        perks: "WFH, Flexible hours"
+      },
+      {
+        id: 2,
+        title: "Data Analyst",
+        company: "Flipkart",
+        location: "Hyderabad",
+        type: "Full-Time",
+        description: "Analyze customer data and help in business growth insights.",
+        responsibilities: ["Collect and clean data", "Create dashboards"],
+        requirements: ["SQL", "Excel"],
+        perks: "Work-life balance"
+      },
+      {
+        id: 3,
+        title: "Digital Marketing Executive",
+        company: "Swiggy",
+        location: "Remote",
+        type: "Contract",
+        description: "Run ad campaigns and manage social media platforms.",
+        responsibilities: ["Plan campaigns", "SEO", "Content marketing"],
+        requirements: ["Meta Ads", "Creative mindset"],
+        perks: "Remote work"
+      },
+      {
+        id: 4,
+        title: "DevOps Engineer",
+        company: "Infosys",
+        location: "Pune",
+        type: "Full-Time",
+        description: "Experience in CI/CD, Docker, and AWS is required.",
+        responsibilities: ["Manage and monitor cloud infrastructure.", "Automate deployment pipelines.", "Ensure system reliability and scalability."],
+        requirements: ["Hands-on with Docker, Jenkins, AWS.", "Knowledge of Kubernetes is a plus.", "Good scripting skills (Bash/Python)."],
+        perks: "Health insurance, onsite opportunities, bonus program."
+      },
+      {
+        id: 5,
+        title: "QA Tester (Manual)",
+        company: "Paytm",
+        location: "Noida",
+        type: "Internship",
+        description: "Test mobile apps manually, report bugs and ensure quality.",
+        responsibilities: ["Create test plans and cases.", "Identify and report bugs clearly.", "Work closely with developers to resolve issues."],
+        requirements: ["Basic knowledge of SDLC & STLC.", "Attention to detail and patience.", "Strong communication skills."],
+        perks: "Internship certificate, PPO opportunity, mentorship."
+      },
+      {
+        id: 6,
+        title: "Full Stack Developer",
+        company: "TCS",
+        location: "Delhi",
+        type: "Full-Time",
+        description: "Hands-on with MERN stack and ability to handle end-to-end web application development.",
+        responsibilities: ["Develop frontend using React.", "Build backend APIs with Node.js.", "Integrate frontend and backend seamlessly."],
+        requirements: ["Strong in JavaScript.", "Experience with MongoDB, Express, React, Node.js.", "Problem-solving and debugging skills."],
+        perks: "Flexible work hours, training programs, annual hike."
+      }
+    
+    ];
+
+  
+    const urlParams = new URLSearchParams(window.location.search);
+    const jobId = parseInt(urlParams.get('id'));
+
+    // Step 2: Find job
+    const job = jobs.find(j => j.id === jobId);
+
+   
+    const container = document.getElementById("jobDetails");
+
+    if (job) {
+      container.innerHTML = `
+        <h1 class="text-2xl font-bold text-gray-800 mb-1">${job.title}</h1>
+        <p class="text-gray-500 mb-4">${job.company} • ${job.location} • ${job.type}</p>
+        <p class="mb-4"><strong>Description:</strong> ${job.description}</p>
+        <p class="font-semibold">Responsibilities:</p>
+        <ul class="list-disc list-inside mb-4">${job.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+        <p class="font-semibold">Requirements:</p>
+        <ul class="list-disc list-inside mb-4">${job.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+        <p><strong>Perks:</strong> ${job.perks}</p>
+      `;
+    } else {
+      container.innerHTML = `<p class="text-red-500">Job not found!</p>`;
+    }
+  </script>
+</body>
+</html>

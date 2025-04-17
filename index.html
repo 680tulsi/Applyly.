@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applyly - Job Board</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-white">
+
+ <!-- Navbar -->
+<nav class="flex items-center justify-between bg-white px-8 py-4 shadow-sm">
+    <div class="flex items-center space-x-2">
+      <img src="assets/logo.png" alt="Applyly Logo" class="h-6 w-6" />
+      <span class="text-blue-600 font-bold text-xl">applyly</span>
+    </div>
+    <div class="hidden md:flex space-x-6 text-gray-700 text-sm">
+      <a href="#" class="hover:text-blue-600">Jobs</a>
+      <a href="#" class="hover:text-blue-600">Companies</a>
+      <a href="#" class="hover:text-blue-600">Services</a>
+    </div>
+    <div class="space-x-4 flex items-center text-sm">
+      <a href="login.html" class="border border-blue-600 text-blue-600 px-4 py-1 rounded-full hover:bg-blue-50">Login</a>
+      <a href="signup.html" class="border border-blue-600 text-blue-600 px-4 py-1 rounded-full hover:bg-blue-50">Register</a>
+      <a href="#" class="text-gray-600 hover:text-blue-600">For Employers</a>
+    </div>
+  </nav>
+  
+
+  <section class="text-center py-12 bg-gradient-to-b from-white to-blue-50">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Find your dream job now</h1>
+    <p class="text-gray-500 mt-2 text-sm md:text-base">5 lakh+ jobs for you to explore</p>
+  </section>
+
+  <!-- Filters -->
+  <section class="px-6 md:px-12 py-6 bg-white">
+    <div class="flex flex-col md:flex-row gap-4 justify-between items-center">
+      <select class="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded-lg text-sm">
+        <option>All Categories</option>
+        <option>Software</option>
+        <option>Marketing</option>
+        <option>Design</option>
+      </select>
+  
+      <select class="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded-lg text-sm">
+        <option>All Locations</option>
+        <option>Remote</option>
+        <option>Bangalore</option>
+        <option>Delhi</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="px-6 md:px-12 py-4 bg-white">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-3">
+      <input type="text" placeholder="Enter skills / designations / companies" class="w-full md:w-80 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+      <select class="w-full md:w-52 px-4 py-2 rounded-full border border-gray-300 text-gray-500">
+        <option>Select experience</option>
+        <option>Fresher</option>
+        <option>1-3 years</option>
+        <option>3+ years</option>
+      </select>
+      <input type="text" placeholder="Enter location" class="w-full md:w-52 px-4 py-2 rounded-full border border-gray-300" />
+      <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">Search</button>
+    </div>
+  </section>
+
+  <!-- Job -->
+  <section class="px-6 md:px-12 py-6 bg-gray-50">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Latest Jobs</h2>
+  
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Job 1 -->
+      <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md border border-gray-200">
+        <h3 class="text-lg font-bold text-gray-800">Frontend Developer</h3>
+        <p class="text-sm text-gray-500 mb-2">Google • Bangalore • Full-Time</p>
+        <p class="text-sm text-gray-600">ReactJS expert needed for web application UI development.</p>
+        <a href="job-detail.html?id=1" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Details →</a>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md border border-gray-200">
+        <h3 class="text-lg font-bold text-gray-800">Data Analyst</h3>
+        <p class="text-sm text-gray-500 mb-2">Flipkart • Hyderabad • Full-Time</p>
+        <p class="text-sm text-gray-600">Analyze customer data and help in business growth insights.</p>
+        <a href="job-detail.html?id=2" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Details →</a>
+      </div>
+
+      <!-- Job 3 -->
+      <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md border border-gray-200">
+        <h3 class="text-lg font-bold text-gray-800">Digital Marketing Executive</h3>
+        <p class="text-sm text-gray-500 mb-2">Swiggy • Remote • Contract</p>
+        <p class="text-sm text-gray-600">Run ad campaigns and manage social media platforms.</p>
+        <a href="job-detail.html?id=3" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Details →</a>
+      </div>
+
+      <!-- Job 4 -->
+      <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md border border-gray-200">
+        <h3 class="text-lg font-bold text-gray-800">DevOps Engineer</h3>
+        <p class="text-sm text-gray-500 mb-2">Infosys • Pune • Full-Time</p>
+        <p class="text-sm text-gray-600">Experience in CI/CD, Docker, and AWS is required.</p>
+        <a href="job-detail.html?id=4" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Details →</a>
+      </div>
+
+      <!-- Job5 -->
+      <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md border border-gray-200">
+        <h3 class="text-lg font-bold text-gray-800">QA Tester (Manual)</h3>
+        <p class="text-sm text-gray-500 mb-2">Paytm • Noida • Internship</p>
+        <p class="text-sm text-gray-600">Test mobile apps manually, report bugs and ensure quality.</p>
+        <a href="job-detail.html?id=5" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Details →</a>
+      </div>
+
+      <!-- Job 6 -->
+      <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md border border-gray-200">
+        <h3 class="text-lg font-bold text-gray-800">Full Stack Developer</h3>
+        <p class="text-sm text-gray-500 mb-2">TCS • Delhi • Full-Time</p>
+        <p class="text-sm text-gray-600">Hands-on with MERN stack and REST API integrations.</p>
+        <a href="job-detail.html?id=6" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View Details →</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
